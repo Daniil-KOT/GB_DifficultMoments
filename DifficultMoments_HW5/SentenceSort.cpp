@@ -7,9 +7,9 @@ SentenceSort::SentenceSort(std::string text)
 	while (startOffset < text.size())
 	{
 		newOffset = StringFindPunctuation(text, startOffset);
-		tmp = text.substr(startOffset, (newOffset - startOffset) + 2); // +2 èñïîëüçóåòñÿ äëÿ äîáàâëåíèÿ â ïîäñòðîêó òî÷êè è ïðîáåëà
+		tmp = text.substr(startOffset, (newOffset - startOffset) + 2); // +2 Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐµÑ‚ÑÑ Ð´Ð»Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð² Ð¿Ð¾Ð´ÑÑ‚Ñ€Ð¾ÐºÑƒ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð¸ Ð¿Ñ€Ð¾Ð±ÐµÐ»Ð°
 		dictionary_.insert({ tmp.size(), tmp });
-		startOffset = newOffset + 2;				// +2 èñïîëüçóåòñÿ, ÷òîáû "ïåðåñêî÷èòü" ÷åðåç òî÷êó è ïðîáåë
+		startOffset = newOffset + 2;				// +2 Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐµÑ‚ÑÑ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ "Ð¿ÐµÑ€ÐµÑÐºÐ¾Ñ‡Ð¸Ñ‚ÑŒ" Ñ‡ÐµÑ€ÐµÐ· Ñ‚Ð¾Ñ‡ÐºÑƒ Ð¸ Ð¿Ñ€Ð¾Ð±ÐµÐ»
 	}
 }
 
