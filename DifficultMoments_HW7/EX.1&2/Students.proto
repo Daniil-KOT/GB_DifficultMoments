@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package University;
+
+message FullName{
+	string name_ = 1;
+	string surname_ = 2;
+	oneof Patronymic{
+		string patronymic_ = 3;
+		bool hasPatronymic_ = 4;
+	}
+}
+
+message Student{
+	University.FullName name_ = 1;
+	repeated int32 scores_ = 2;
+	int32 average_ = 3;
+}
+
+message StudentsGroup{
+	repeated University.Student students_ = 1;
+}
